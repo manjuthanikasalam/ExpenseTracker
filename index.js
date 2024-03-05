@@ -28,7 +28,7 @@ async function connectToDb(){
 try{
     await mongoose.connect('mongodb+srv://manju:manju1310@manju.nlsyjda.mongodb.net/ExpenseTracker?retryWrites=true&w=majority&appName=Manju')
     console.log("DB connection established")
-    const port =8000
+    const port =process.env.PORT || 8000
 app.listen(port,function(){
     console.log(`listening on port ${port}`)
 })
